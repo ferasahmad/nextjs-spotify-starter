@@ -11,7 +11,7 @@ interface WithPublicProps {
 
 export default function WithPublic({
   children,
-  redirectTo = "/dashboard",
+  redirectTo = "/",
 }: WithPublicProps) {
   const { data: session, status } = useSession();
   const router = useRouter();
