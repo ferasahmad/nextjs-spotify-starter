@@ -38,8 +38,6 @@ Open http://localhost:3000 in your browser.
 
 ## 📚 Project Structure
 
-The repository is organized as follows:
-
 ```plaintext
 src/
 ├── app/
