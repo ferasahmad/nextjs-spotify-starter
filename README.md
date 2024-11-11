@@ -1,6 +1,6 @@
 ## 🚀 Overview
 
-A starter template for integrating Spotify's Web API with a Next.js project, including authentication, data fetching, and reusable components.
+A starter template for integrating Spotify's Web API with a Next.js project, including authentication, data fetching, and some reusable components :)
 
 This project uses the following frameworks:
 
@@ -53,4 +53,4 @@ src/
 │   ├── apiClient.ts             # Axios instance for Spotify API requests
 │   ├── endpoints.ts             # Spotify API endpoint definitions
 │   ├── utils.ts                 # Helper functions for Spotify API calls
-
+```
