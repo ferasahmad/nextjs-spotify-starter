@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## 🚀 Overview
 
-## Getting Started
+A starter template for integrating Spotify's Web API with a Next.js project, including authentication, data fetching, and reusable components.
 
-First, run the development server:
+This project uses the following frameworks:
 
+- **Next.js**: `14.2.12`
+- **NextAuth.js**: `4.24.7`
+- **Tailwind CSS**: `3.4.1`
+
+## 📝 Getting Started
+
+Follow these steps to clone and run the repository locally:
+
+1. **Clone the Repository:**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/nextjs-spotify-starter.git
+cd nextjs-spotify-starter
 ```
+2. **Install Dependencies:**
+```
+npm install
+```
+4. **Set Up Environment Variables:**
+```
+SPOTIFY_CLIENT_ID=your_spotify_client_id
+SPOTIFY_CLIENT_SECRET=your_spotify_client_secret
+NEXTAUTH_SECRET=your_nextauth_secret
+NEXTAUTH_URL=http://localhost:3000
+```
+4. **Run the Development Server:**
+```
+npm run dev
+```
+5. **Access the App:**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📚 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The repository is organized as follows:
 
-## Learn More
+```plaintext
+src/
+├── app/
+│   ├── api/auth/[...nextauth]/   # NextAuth API route for Spotify authentication
+│   ├── login/                   # Login page components and logic
+│   ├── HomeClient.tsx           # Main client-side logic for the home page
+│   ├── layout.tsx               # Root layout component
+│   ├── page.tsx                 # Main page entry
+├── components/                  # Reusable React components
+├── hoc/                         # Higher-order components (e.g., authentication wrappers)
+├── hooks/                       # Custom React hooks
+├── lib/spotify/                 # Spotify-specific API clients and utilities
+│   ├── apiClient.ts             # Axios instance for Spotify API requests
+│   ├── endpoints.ts             # Spotify API endpoint definitions
+│   ├── utils.ts                 # Helper functions for Spotify API calls
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
