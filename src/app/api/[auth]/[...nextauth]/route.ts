@@ -6,8 +6,18 @@ const options: NextAuthOptions = {
   providers: [
     SpotifyProvider({
       authorization:
-        // "https://accounts.spotify.com/authorize?scope=user-top-read%20user-read-recently-played",
-        "https://accounts.spotify.com/authorize?scope=user-read-email,playlist-read-private,playlist-modify-private,playlist-modify-public",
+        "https://accounts.spotify.com/authorize?scope=" +
+        [
+          "user-top-read", // Access top artists and tracks
+          "user-read-recently-played", // Access recently played tracks
+          "user-read-email", // Access email
+          "user-library-read", // Access saved tracks and albums
+          "playlist-read-private", // Access private playlists
+          "playlist-modify-private", // Modify private playlists
+          "playlist-modify-public", // Modify public playlists
+          "user-library-modify", // Modify saved tracks and albums
+          "user-read-private", // Access user profile
+        ].join(" "),
       clientId: process.env.SPOTIFY_CLIENT_ID || "",
       clientSecret: process.env.SPOTIFY_CLIENT_SECRET || "",
     }),
