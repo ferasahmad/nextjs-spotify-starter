@@ -15,6 +15,8 @@ Follow these steps to clone and run the repository locally:
 1. **Clone the Repository:**
 ```bash
 git clone https://github.com/ferasahmad/nextjs-spotify-starter.git your-project-name
+```
+```
 cd nextjs-spotify-starter
 ```
 2. **Install Dependencies:**
